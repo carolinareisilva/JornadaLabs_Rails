@@ -29,7 +29,7 @@ class Conta
 		
 		retirou = sacar(valor)
 		
-		if(retirou = 1 && valor < @saldo)
+		if(retirou = 1 )
 			conta_destino.depositar(valor)
 			
 			puts("Ok! R$ #{valor} foi transferido com sucesso.\n")
