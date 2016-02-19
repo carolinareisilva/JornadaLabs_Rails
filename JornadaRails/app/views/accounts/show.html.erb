@@ -1,0 +1,12 @@
+<p>
+	<strong>Title:</strong>
+	<%= @account.title %>
+</p>
+
+<p>
+	<strong>Autor:</strong>
+	<%= @account.author %>
+</p>
+
+<%= link_to 'Listar contas', accounts_path %>
+<%= link_to 'Editar', edit_account_path(@account) %>

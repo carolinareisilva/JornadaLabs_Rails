@@ -1,0 +1,27 @@
+
+<%= form_for @account do |f| %>
+	<%if @account.errors.any? %>
+		<div id="error">
+			<h2>
+				<%= pluralize(@account.errors.count, 'error') %> prohibited this book from begin saved:
+			</h2>
+			<ul>
+				<% account.errors.full.messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+<p> 
+	<%= f.label :title %><br> 
+	<%= f.text_field :title %> 
+</p> 
+<p> 
+	<%= f.label :author %><br> 
+	<%= f.text_field :author %> 
+</p> 
+<p> 
+	<%= f.submit %> 
+</p>
+<% end %>

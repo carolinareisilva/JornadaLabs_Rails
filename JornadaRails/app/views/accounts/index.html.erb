@@ -1,0 +1,17 @@
+<h1>Listando contas</h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Autor</th>
+	</tr>
+
+	<% @accounts.each do |account| %>
+		<tr>
+			<td><%= account.title %></td>
+			<td><%= account.author %></td>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to 'Cadastrar conta', new_account_path %>
