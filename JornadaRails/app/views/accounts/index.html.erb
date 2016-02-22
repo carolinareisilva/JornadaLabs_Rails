@@ -10,6 +10,9 @@
 		<tr>
 			<td><%= account.title %></td>
 			<td><%= account.author %></td>
+			<td><%= link_to 'Destroy', account_path(account),
+					method: :delete,
+					data: { confirm: 'Are you sure?' } %></td>
 		</tr>
 	<% end %>
 </table>
