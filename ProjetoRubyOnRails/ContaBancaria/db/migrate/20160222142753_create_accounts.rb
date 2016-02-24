@@ -3,6 +3,7 @@ class CreateAccounts < ActiveRecord::Migration
     create_table :accounts do |t|
       t.string :agency
       t.string :account_number
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end

@@ -1,6 +1,5 @@
-<h1>ACEESSE SUA CONTA BANCÁRIA</h1>
 
-<%= form_for :account, url: accounts_path do |f| %>
+<%= form_for @account do |f| %>
 	<%if @account.errors.any? %>
 		<div id="error">
 			<h2>
@@ -26,6 +25,3 @@
 	<%= f.submit %> 
 </p>
 <% end %>
-
-
-<p><%= link_to 'Não tenho cadastro', new_user_path %></p>

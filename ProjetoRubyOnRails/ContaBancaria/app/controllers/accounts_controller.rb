@@ -10,15 +10,22 @@ class AccountsController < ApplicationController
 		@account = Account.new
 	end
 
-	def access	
-		@account = Account
+	def show	
+		@account = Account.find(params[:id])
+	end
+
+	def authentication
+		@account = Account.find_by(agency: params[:account][:agency])
+             #   if @user && user.authenticate(params[:account][:account_number])
+             #             
+   			#	end 
 	end
 
 	def index
-		@accounts = Account.all
+		@account = Account.new
 	end
 
-	def opitions
+	def options
 		@account = Account.find(params[:id])
 	end
 

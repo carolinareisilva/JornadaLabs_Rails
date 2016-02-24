@@ -1,0 +1,23 @@
+<h1>Olá <%= @user.user_name %></h1>
+<%= link_to 'Sair', accounts_path %>
+<p>
+	<strong>Agência:</strong>
+	<%= @account.agency %>
+</p>
+
+<p>
+	<strong>Conta:</strong>
+	<%= @account.account_number %>
+</p>
+
+<%= link_to 'Editar dados', accounts_path %>
+
+<p>
+	<strong>Saldo:</strong>
+	<%= @account.balance %>
+</p>
+
+<h3>Operações</h3>
+<%= link_to 'Saque', accounts_path %>
+<%= link_to 'Depósito', accounts_path %>
+<%= link_to 'Transferência', accounts_path %>

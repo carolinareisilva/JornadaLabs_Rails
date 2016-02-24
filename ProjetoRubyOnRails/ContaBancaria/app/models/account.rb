@@ -1,5 +1,5 @@
 class Account < ActiveRecord::Base
-	has_one :users
-	validates agency, presence: true, legth: { maximun: 5 }
-	validates account_number, presence: true, legth: { maximun: 6 }
+	validates :agency, presence: true, length: { maximum: 5 }
+	validates :account_number, presence: true, length: { maximum: 6 }
+	belongs_to :user
 end
